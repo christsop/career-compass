@@ -1,15 +1,21 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import './styles.css';
+import './styles.scss';
 import Link from 'next/link';
-import 'bulma/css/bulma.css'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Roboto_Mono } from 'next/font/google'
+
+const roboto = Roboto_Mono({
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
-
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,10 +26,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Navbar />
-      <main className="app">
+      <main className={roboto.className}>
         <Component {...pageProps} />
       </main>
-      <Footer />
+      <Footer className={roboto.className} />
     </>
   );
 }

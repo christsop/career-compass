@@ -10,6 +10,7 @@ export function Index() {
         alt="Career Path"
         width={600}
         height={400}
+        className="landing-image"
       />
     </div>
   );
