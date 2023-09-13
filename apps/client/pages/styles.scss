@@ -1,24 +1,20 @@
-@import "bulma/bulma.sass";
-
+@import 'bulma/bulma.sass';
 
 $bg-primary: #0f2832;
 $bg-footer: #d33a2d;
 $footer-dot: #811d15;
-$f-white: #E5E5E5;
+$f-white: #e5e5e5;
 
 main {
   min-height: 90vh;
   background-color: $bg-primary;
   color: $f-white;
-
-
 }
 
 .footer {
   background-color: $bg-footer;
   color: white;
   font-size: 24px;
-
 
   .contact {
     margin: 4em 0;
@@ -28,12 +24,73 @@ main {
     gap: 1em;
 
     .dot:before {
-      content: "•";
+      content: '•';
       color: $footer-dot;
     }
   }
 
   .copyright {
     font-size: 14px;
+  }
+}
+
+.test {
+  .questions {
+    margin-top: 3em;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+
+    .question {
+      color: black;
+      background-color: #ededed;
+      border-radius: 20px;
+      padding: 1em;
+    }
+  }
+}
+
+.options {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .option {
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+
+    &_color-rate-0 {
+      background-color: #f51e1e66;
+    }
+    &_color-rate-1 {
+      background-color: #f51e1e33;
+    }
+    &_color-rate-2 {
+      background-color: #fcfcfc;
+    }
+    &_color-rate-3 {
+      background-color: #08cf2333;
+    }
+    &_color-rate-4 {
+      background-color: #08cf2366;
+    }
+
+    &_is-selected {
+      border: 5px solid black;
+    }
+
+    &:hover {
+      transition-duration: 120ms;
+      scale: 105%;
+    }
   }
 }

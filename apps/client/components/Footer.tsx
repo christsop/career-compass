@@ -3,10 +3,10 @@ import classNames from 'classnames';
 const Footer = ({ className }) => (
   <footer className={classNames('footer', className)}>
     <div className="content has-text-centered">
-      <p>
+      <div>
         WE'RE HERE TO HELP YOU NAVIGATE YOUR CAREER JOURNEY. <br />
         IF YOU HAVE ANY QUESTIONS, FEEL FREE TO REACH OUT TO US:
-      </p>
+      </div>
       <div className="contact">
         <span>
           Email:{' '}
